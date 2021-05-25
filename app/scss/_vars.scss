@@ -2,10 +2,12 @@ $accent-color: #243f4d;
 $accent2-color: #a3bbc8;
 $accent3-color: #edf1f4;
 $accent4-color: #fcd7b6;
-$default-color: #8d8d8d;
+$default-color: #7b7b7b;
 $title-color: #191919;
+$title-footer: #1f2044;
 $menu:#436372;
 $bg-block1:#feefe2;
+
 
 
 %rubik-400 {
@@ -36,4 +38,12 @@ $bg-block1:#feefe2;
 %dmSans-700 {
   font-family: 'DMSans-Bold', sans-serif;
   font-weight: 700;
+}
+
+%btn {
+  padding: 12px 12px;
+  color: #fff;
+  background-color: $accent2-color;
+  @extend %dmSans-400;
+  cursor: pointer;
 }
