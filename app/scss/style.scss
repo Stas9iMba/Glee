@@ -5,6 +5,7 @@
 
 .header {
   padding: 40px 0;
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -16,53 +17,63 @@
   &__list {
     display: flex;
   }
+
   &__list-item {
     &:not(:last-child) {
       padding-right: 35px;
     }
   }
+
   &__list-link {
     color: $menu;
     text-decoration: none;
     transition: color 0.2s linear;
     @extend %rubik-500;
+
     &:hover {
       transition: color 0.2s linear;
     }
   }
-  &__list-link--active {
-  }
+
+  &__list-link--active {}
 }
 
 .user-nav {
   display: flex;
+
   &__link {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+
     &:not(:last-child) {
       margin-right: 25px;
     }
   }
+
   &__link:hover {
     background-color: $accent-color;
-    span{
+
+    span {
       transition: all .3s;
       background-color: #fff;
       color: $accent-color;
     }
+
     path {
       fill: $accent3-color;
     }
   }
+
   &__link-search,
   &__link-btn {
     height: 51px;
     width: 51px;
     border-radius: 50%;
     position: relative;
-    &::after{
+
+    &::after {
       content: '';
       position: absolute;
       top: 50%;
@@ -70,19 +81,23 @@
       transform: translate(-50%, -50%);
     }
   }
-  &__link-search{
+
+  &__link-search {
     background-color: $accent3-color;
   }
+
   &__link-btn {
     background-color: $menu;
   }
-  &__container{
+
+  &__container {
     display: flex;
     justify-content: space-between;
     margin-right: 25px;
     position: relative;
   }
-  &__btn{
+
+  &__btn {
     border: none;
     background-color: $accent4-color;
     display: inline-block;
@@ -92,24 +107,29 @@
     text-align: center;
     transition: all .3s;
   }
+
   &__btn:hover {
     background-color: $accent-color;
-    span{
+
+    span {
       transition: all .3s;
       background-color: #fff;
       color: $accent-color;
     }
+
     path {
       fill: $accent3-color;
     }
   }
 
-  &__btn-heart{
+  &__btn-heart {
     border-radius: 50px 0 0 50px;
   }
-  &__btn-cart{
+
+  &__btn-cart {
     border-radius: 0 50px 50px 0;
   }
+
   &__num {
     position: absolute;
     width: 20px;
@@ -123,11 +143,95 @@
     top: 6px;
     transition: all .3s;
   }
-  &__num-heart{
+
+  &__num-heart {
     left: 45px;
   }
-  &__num-cart{
+
+  &__num-cart {
     right: 25px;
+  }
+}
+
+.footer {}
+
+
+.footer-top {
+  display: flex;
+  padding: 74px 0;
+  border-bottom: 1px solid #dae4e9;
+
+  &__contact {
+    width: 220px;
+    margin-right: 100px;
+  }
+
+  &__nav {
+    width: 170px;
+    margin-right: 70px;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  &__adress,
+  &__email,
+  &__phone {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    color: $title-footer;
+    margin-bottom: 40px;
+    @extend %dmSans-700;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin-bottom: 35px;
+  }
+
+  &__form-input {
+    max-width: 170px;
+    width: 100%;
+    background-color: $bg-block1;
+    border: none;
+    padding: 12px 10px 12px 15px;
+    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+
+    &::placeholder {
+      color: $accent-color;
+      font-size: 16px;
+    }
+  }
+
+  &__form-btn {
+    @extend %btn;
+    border: none;
+  }
+}
+
+.footer-bottom {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+
+  &__nav {
+    display: inline;
+    vertical-align: middle;
+    margin-left: 25px;
   }
 }
 
