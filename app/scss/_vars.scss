@@ -1,0 +1,39 @@
+$accent-color: #243f4d;
+$accent2-color: #a3bbc8;
+$accent3-color: #edf1f4;
+$accent4-color: #fcd7b6;
+$default-color: #8d8d8d;
+$title-color: #191919;
+$menu:#436372;
+$bg-block1:#feefe2;
+
+
+%rubik-400 {
+  font-family: 'Rubik-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%rubik-500 {
+  font-family: 'Rubik-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%rubik-700 {
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%dmSans-400 {
+  font-family: 'DMSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%dmSans-500 {
+  font-family: 'DMSans-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%dmSans-700 {
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+}

@@ -1,0 +1,134 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+.header {
+  padding: 40px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__list-item {
+    &:not(:last-child) {
+      padding-right: 35px;
+    }
+  }
+  &__list-link {
+    color: $menu;
+    text-decoration: none;
+    transition: color 0.2s linear;
+    @extend %rubik-500;
+    &:hover {
+      transition: color 0.2s linear;
+    }
+  }
+  &__list-link--active {
+  }
+}
+
+.user-nav {
+  display: flex;
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+  &__link:hover {
+    background-color: $accent-color;
+    span{
+      transition: all .3s;
+      background-color: #fff;
+      color: $accent-color;
+    }
+    path {
+      fill: $accent3-color;
+    }
+  }
+  &__link-search,
+  &__link-btn {
+    height: 51px;
+    width: 51px;
+    border-radius: 50%;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__link-search{
+    background-color: $accent3-color;
+  }
+  &__link-btn {
+    background-color: $menu;
+  }
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 25px;
+    position: relative;
+  }
+  &__btn{
+    border: none;
+    background-color: $accent4-color;
+    display: inline-block;
+    padding: 10px 35px;
+    cursor: pointer;
+    line-height: 0;
+    text-align: center;
+    transition: all .3s;
+  }
+  &__btn:hover {
+    background-color: $accent-color;
+    span{
+      transition: all .3s;
+      background-color: #fff;
+      color: $accent-color;
+    }
+    path {
+      fill: $accent3-color;
+    }
+  }
+
+  &__btn-heart{
+    border-radius: 50px 0 0 50px;
+  }
+  &__btn-cart{
+    border-radius: 0 50px 50px 0;
+  }
+  &__num {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background-color: $accent-color;
+    top: 6px;
+    transition: all .3s;
+  }
+  &__num-heart{
+    left: 45px;
+  }
+  &__num-cart{
+    right: 25px;
+  }
+}
+
+@import 'media';
