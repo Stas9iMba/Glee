@@ -5,7 +5,11 @@
 
 .header {
   padding: 40px 0;
-
+  &__conrainer{
+    max-width: 1800px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -14,6 +18,9 @@
 }
 
 .menu {
+  margin-left: 150px;
+  align-items: center;
+  margin-bottom: 10px;
   &__list {
     display: flex;
   }
@@ -153,9 +160,6 @@
   }
 }
 
-.footer {}
-
-
 .footer-top {
   display: flex;
   padding: 74px 0;
@@ -181,24 +185,51 @@
   &__phone {
     display: block;
     margin-bottom: 15px;
+    transition: all .3s;
+
+    &:hover {
+      color: $accent-color;
+      @extend %rubik-500;
+      transition: all .3s;
+
+    }
   }
 
   &__title {
     color: $title-footer;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     @extend %dmSans-700;
     text-transform: uppercase;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 1;
+    padding-top: 20px;
   }
 
   &__link {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    transition: all .3s;
+
+    &:hover {
+      color: $accent-color;
+      @extend %rubik-500;
+      transition: all .3s;
+
+    }
   }
 
   &__text {
     margin-bottom: 35px;
+    font-size: 14px;
+    line-height: 26px;
+    color: $default-color;
+    text-decoration: none;
+    @extend %rubik-400;
+  }
+
+  &__item-form {
+    margin-left: auto;
+    width: 272px;
   }
 
   &__form-input {
@@ -211,6 +242,7 @@
 
     &::placeholder {
       color: $accent-color;
+      @extend %dmSans-400;
       font-size: 16px;
     }
   }
@@ -218,6 +250,11 @@
   &__form-btn {
     @extend %btn;
     border: none;
+    transition: all .3s;
+    &:hover {
+      background-color: $accent-color;
+      transition: all .3s;
+    }
   }
 }
 
@@ -227,12 +264,29 @@
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
-
-  &__nav {
-    display: inline;
-    vertical-align: middle;
-    margin-left: 25px;
-  }
 }
 
+.footer-menu{
+  &__items{
+    display: flex;
+  }
+  &__item {
+    padding: 0 15px;
+    position: relative;
+    &:not(:last-child)::after{
+      content: '|';
+      position: absolute;
+      right: 0;
+    }
+  }
+  &__link {
+    transition: all .3s;
+    &:hover {
+      color: $accent-color;
+      @extend %rubik-400;
+      transition: all .3s;
+
+    }
+  }
+}
 @import 'media';
