@@ -1,15 +1,18 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'lips';
 @import 'global';
 
 .header {
   padding: 40px 0;
-  &__conrainer{
+
+  &__conrainer {
     max-width: 1800px;
     padding: 0 15px;
     margin: 0 auto;
   }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -21,6 +24,7 @@
   margin-left: 150px;
   align-items: center;
   margin-bottom: 10px;
+
   &__list {
     display: flex;
   }
@@ -41,8 +45,6 @@
       transition: color 0.2s linear;
     }
   }
-
-  &__list-link--active {}
 }
 
 .user-nav {
@@ -249,8 +251,10 @@
 
   &__form-btn {
     @extend %btn;
+    @extend %dmSans-400;
     border: none;
     transition: all .3s;
+
     &:hover {
       background-color: $accent-color;
       transition: all .3s;
@@ -266,27 +270,144 @@
   font-size: 12px;
 }
 
-.footer-menu{
-  &__items{
+.footer-menu {
+  &__items {
     display: flex;
   }
+
   &__item {
     padding: 0 15px;
     position: relative;
-    &:not(:last-child)::after{
+
+    &:not(:last-child)::after {
       content: '|';
       position: absolute;
       right: 0;
     }
   }
+
   &__link {
     transition: all .3s;
+
     &:hover {
       color: $accent-color;
       @extend %rubik-400;
       transition: all .3s;
-
     }
   }
 }
+
+
+.top-slider {
+  display: block;
+  background-color: $accent4-color;
+  max-width: 1770px;
+  margin: 0 auto;
+  padding: 210px 0 80px;
+  position: relative;
+  z-index: 10;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url('../images/ellips-bg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 609px;
+    height: 634px;
+    width: 100%;
+    top: 10%;
+    left: 28%;
+    z-index: -1;
+  }
+
+  &__inner {}
+
+  &__item {
+    display: flex !important;
+    justify-content: space-between;
+  }
+
+  &__content {
+    padding-right: 20px;
+  }
+
+  &__title {
+
+    font-size: 72px;
+    line-height: 1;
+    color: $accent-color;
+    margin-bottom: 35px;
+    @extend %rubik-500;
+  }
+
+  &__text {
+    max-width: 320px;
+    margin-bottom: 55px;
+    @extend %rubik-400;
+  }
+
+  &__link {
+    @extend %btn;
+    @extend %rubik-500;
+    padding: 20px 100px 20px 25px;
+    position: relative;
+    display: inline-block;
+    transition: all .3s;
+
+    &:hover {
+      background-color: $accent-color;
+      transition: all .3s;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/arrow-btn.svg');
+      width: 22px;
+      height: 9px;
+      right: 20px;
+      top: 28px;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    margin-left: auto;
+    object-fit: contain;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    padding-top: 140px;
+
+    li {
+      padding: 0 6px;
+      line-height: 1;
+
+      button {
+        padding: 0;
+        font-size: 11px;
+        background-color: #fde3cc;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        position: relative;
+        color: #667983;
+      }
+
+      &.slick-active {
+        button {
+          background-color: #fff;
+          color: #fde3cc;
+        }
+      }
+    }
+  }
+}
+
+
 @import 'media';
