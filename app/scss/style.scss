@@ -471,7 +471,8 @@
 }
 
 .products {
-  padding-bottom: 70px;
+  margin-bottom: 180px;
+
   &__items{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -597,5 +598,23 @@
     }
   }
 }
+
+.video {
+  background-image: url('../images/video-bg.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 120px 0;
+  height: 501px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+ }
+
 
 @import 'media';

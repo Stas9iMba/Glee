@@ -47,3 +47,10 @@ $bg-block1:#feefe2;
   @extend %rubik-500;
   cursor: pointer;
 }
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
