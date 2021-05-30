@@ -24,8 +24,8 @@ body {
 
 a {
   font-size: 14px;
-  line-height: 36px;
+  line-height: 26px;
   color: $default-color;
   text-decoration: none;
-  @extend %rubik-500;
+  @extend %rubik-400;
 }
