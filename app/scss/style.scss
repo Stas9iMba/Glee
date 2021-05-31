@@ -473,23 +473,26 @@
 .products {
   margin-bottom: 180px;
 
-  &__items{
+  &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px 30px;
+    padding-bottom: 180px;
   }
+
   &__top {
     text-align: center;
     margin-bottom: 70px;
   }
 
   &__title {
+    padding-top: 20px;
     font-size: 36px;
     color: #000;
     margin-bottom: 25px;
-  }
+    @extend %dmSans-700;
 
-  &__filter {}
+  }
 
   &__btn {
     border: none;
@@ -497,6 +500,8 @@
     cursor: pointer;
     transition: all 0.3s;
     color: $default-color;
+    @extend %dmSans-700;
+
 
     &:hover {
       color: #000;
@@ -524,7 +529,8 @@
     min-height: 380px;
     overflow: hidden;
     transition: all .3s linear;
-    &:hover{
+
+    &:hover {
       box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2);
     }
   }
@@ -599,6 +605,171 @@
   }
 }
 
+.products-bottom{
+  &__container{
+    max-width: 1770px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+   }
+  &__item {
+    background-color: $bg-block1;
+    width: 870px;
+    height: 390px;
+    position: relative;
+
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__image { }
+  &__photo {
+    position: absolute;
+    top: -120px;
+    left: 150px;
+  }
+  &__info {
+    width: 50%;
+    margin-left: auto;
+    padding: 100px 10px 10px 0;
+  }
+  &__title {
+    font-size: 26px;
+    color: $title-color;
+    @extend %dmSans-700;
+    margin-bottom: 25px;
+    color: $accent-color;
+
+  }
+  &__text{
+    @extend %rubik-400;
+    color: $accent-color;
+    margin-bottom: 35px;
+  }
+  &__link{
+    @extend %btn;
+    @extend %rubik-500;
+    
+    border-radius: 1px solid $accent-color;
+    padding: 20px 100px 20px 25px;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $accent-color;
+      transition: all 0.3s;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/arrow-btn.svg');
+      width: 22px;
+      height: 9px;
+      right: 20px;
+      top: 28px;
+    }
+  }
+}
+
+
+
+
+
+
+.design {
+  margin-bottom: 180px;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px 30px;
+  }
+
+  &__top {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  &__title {
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 25px;
+    @extend %dmSans-700;
+  }
+
+  &__filter {}
+
+  &__btn {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: $default-color;
+    @extend %dmSans-700;
+
+
+    &:hover {
+      color: #000;
+      transition: all 0.3s;
+    }
+  }
+
+  &__btn:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__item {
+    background-color: rgb(248, 248, 248);
+    position: relative;
+    max-width: 370px;
+    width: 100%;
+    height: 246px;
+    text-align: left;
+    border-radius: 6px 6px 0 0;
+    overflow: hidden;
+    z-index: 1;
+    transition: all .3s linear;
+    &:hover{
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2);
+    }
+  }
+
+  &__info {
+    flex: 1 2 auto;
+    padding: 40px 10px 10px 45px;
+    @extend %dmSans-700;
+  }
+
+  &__info-name {
+    font-size: 20px;
+    color: $title-color;
+    margin-bottom: 12px;
+  }
+
+  &__info-style {
+    color: $accent2-color;
+  }
+
+  &__image {
+  position: absolute;
+  top: 50%;
+  left: 263px;
+  transform: translate(-43%, -37%);
+  object-fit: cover;
+  }
+}
+
+
+
+
+
+
+
 .video {
   background-image: url('../images/video-bg.png');
   background-position: center center;
@@ -609,12 +780,15 @@
   position: relative;
   display: flex;
   justify-content: center;
+
   &__inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
- }
+}
+
+
 
 
 @import 'media';
