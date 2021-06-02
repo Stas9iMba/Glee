@@ -54,3 +54,12 @@ $bg-block1:#feefe2;
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
 }
+
+.title {
+  @extend %dmSans-700;
+  font-size: 36px;
+  line-height: 1;
+  color: $title-color;
+  margin-bottom: 10px;
+}
+
